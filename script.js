@@ -12,10 +12,35 @@
 
 
 
-// data di oggi
-const currentDate = new Date();
-console.log(currentDate)
+
 
 // data e ora di lunedì
-const mondayDate = new Date("February 12, 2024 9:30:00");
-console.log(mondayDate)
+
+const mondayDate = new Date("February 12, 2024 9:30:00").getTime();
+document.getElementById("timer").innerHTML = mondayDate;
+
+// data di oggi
+const date = new Date();
+console.log(date)
+
+
+//ore mancanti
+const count = mondayDate - date;
+console.log(count)
+
+const days = Math.floor(count / (1000 * 60 * 60 * 24));
+console.log(days)
+const hours = Math.floor(count % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+console.log(hours)
+const minutes = Math.floor(count % (1000 * 60 * 60) / (1000 * 60));
+console.log(minutes)
+const seconds = Math.floor(count % (1000 * 60) / 1000);
+console.log(seconds)
+
+
+
+
+
+
+
+
