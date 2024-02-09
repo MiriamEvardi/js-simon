@@ -7,12 +7,8 @@ const timer = setInterval(function () {
     // data di oggi
     const date = new Date();
 
-
-
-    // function actualCountdown() {
     //ore mancanti
     const count = mondayDate - date;
-
 
 
     const days = Math.floor(count / (1000 * 60 * 60 * 24));
@@ -31,7 +27,8 @@ const timer = setInterval(function () {
         clearInterval(timer);
         document.getElementById("timer").innerText = "Time is up"
     }
-}, 1000)
+
+}, 1000);
 
 
 
