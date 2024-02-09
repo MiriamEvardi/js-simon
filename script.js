@@ -13,29 +13,35 @@
 
 
 
-
 // data e ora di lunedì
+const mondayDate = new Date("February 9, 2024 16:43:00");
 
-const mondayDate = new Date("February 12, 2024 9:30:00").getTime();
-document.getElementById("timer").innerHTML = mondayDate;
-
-// data di oggi
-const date = new Date();
-console.log(date)
+const timer = setInterval(function () {
+    // data di oggi
+    const date = new Date();
 
 
-//ore mancanti
-const count = mondayDate - date;
-console.log(count)
 
-const days = Math.floor(count / (1000 * 60 * 60 * 24));
-console.log(days)
-const hours = Math.floor(count % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
-console.log(hours)
-const minutes = Math.floor(count % (1000 * 60 * 60) / (1000 * 60));
-console.log(minutes)
-const seconds = Math.floor(count % (1000 * 60) / 1000);
-console.log(seconds)
+    // function actualCountdown() {
+    //ore mancanti
+    const count = mondayDate - date;
+
+
+
+    const days = Math.floor(count / (1000 * 60 * 60 * 24));
+
+    const hours = Math.floor(count % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+
+    const minutes = Math.floor(count % (1000 * 60 * 60) / (1000 * 60));
+
+    const seconds = Math.floor(count % (1000 * 60) / 1000);
+
+
+    document.getElementById("timer").innerText = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+
+
+}, 0)
+
 
 
 
