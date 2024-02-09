@@ -9,3 +9,13 @@
 // Quanti millisecondi mi separano da domani alle 9:30?
 // Esiste un oggetto JS in grado di gestire le date?
 // Esistono dei metodi per trasformare una data in millisecondi?
+
+
+
+// data di oggi
+const currentDate = new Date();
+console.log(currentDate)
+
+// data e ora di lunedì
+const mondayDate = new Date("February 12, 2024 9:30:00");
+console.log(mondayDate)
